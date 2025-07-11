@@ -1,5 +1,24 @@
 import React from 'react';
 import '../styles/global.css';
+import UserIcon from '../assets/icons/user.svg?react';
+import UsersIcon from '../assets/icons/users.svg?react';
+import RolesIcon from '../assets/icons/roles.svg?react';
+import ProductIcon from '../assets/icons/product.svg?react';
+import CategoryIcon from '../assets/icons/category.svg?react';
+import ProviderIcon from '../assets/icons/provider.svg?react';
+import WarehouseIcon from '../assets/icons/warehouse.svg?react';
+import SaleIcon from '../assets/icons/sale.svg?react';
+
+const menuItems = [
+  { label: 'Cliente', icon: <UserIcon />, active: true },
+  { label: 'Usuarios', icon: <UsersIcon /> },
+  { label: 'Roles', icon: <RolesIcon /> },
+  { label: 'Productos', icon: <ProductIcon /> },
+  { label: 'Categorías', icon: <CategoryIcon /> },
+  { label: 'Proveedores', icon: <ProviderIcon /> },
+  { label: 'Bodegas', icon: <WarehouseIcon /> },
+  { label: 'Registrar Ventas', icon: <SaleIcon /> },
+];
 
 const Sidebar = () => {
   return (
@@ -12,14 +31,12 @@ const Sidebar = () => {
         </div>
       </div>
       <ul>
-        <li className="active">👤 Cliente</li>
-        <li>👥 Usuarios</li>
-        <li>🛡️ Roles</li>
-        <li>📦 Productos</li>
-        <li>📚 Categorías</li>
-        <li>🔗 Proveedores</li>
-        <li>🚚 Bodegas</li>
-        <li>🛒 Registrar Ventas</li>
+        {menuItems.map((item, idx) => (
+          <li key={item.label} className={item.active ? 'active' : ''}>
+            <span className="sidebar-icon">{item.icon}</span>
+            {item.label}
+          </li>
+        ))}
       </ul>
     </div>
   );

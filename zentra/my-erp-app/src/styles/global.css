@@ -28,7 +28,7 @@ body {
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 5px 0 20px rgba(0,0,0,0.20);
+  box-shadow: 10px 0 40px 8px rgba(0,0,0,0.35);
 }
 
 .sidebar-avatar {
@@ -43,7 +43,6 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  border: 2px solid #fff3;
   text-align: center;
   line-height: 1;
   padding: 0;
@@ -75,16 +74,27 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 80px;
 }
 
 .sidebar li {
   padding: 15px 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
   font-weight: 600;
   border-left: 4px solid transparent;
+  margin-bottom: 16px;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
 }
 
 .sidebar li:hover,
@@ -94,7 +104,7 @@ body {
 }
 
 .topbar {
-  height: 80px;
+  height: 110px;
   background-color: var(--white);
   display: flex;
   align-items: center;
@@ -107,6 +117,22 @@ body {
   right: 0;
   z-index: 200;
 }
+
+.topbar-logo {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+.topbar-avatar {
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+
 
 .sidebar {
   width: 250px;
@@ -135,7 +161,7 @@ body {
 .user-icon {
   width: 35px;
   height: 35px;
-  background-color: #aaa;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
